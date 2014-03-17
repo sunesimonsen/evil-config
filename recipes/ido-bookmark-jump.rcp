@@ -1,0 +1,6 @@
+(:name ido-bookmark-jump
+       :website "https://github.com/sunesimonsen/ido-bookmark-jump"
+       :description "Using Emacs ido to search for bookmarks."
+       :type github
+       :pkgname "sunesimonsen/ido-bookmark-jump"
+       :features ido-bookmark-jump)

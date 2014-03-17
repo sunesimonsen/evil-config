@@ -1,0 +1,7 @@
+(:name evil-textobj-between
+       :website "https://github.com/tarao/evil-plugins"
+       :description "Provides text object for selecting a range between a character"
+       :type http
+       :url "https://raw2.github.com/tarao/evil-plugins/master/evil-textobj-between.el")
+
+ 

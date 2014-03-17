@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: some
+# key: some
+# --
+some(function (${item}) {
+    $0
+})

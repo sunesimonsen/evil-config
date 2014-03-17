@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: action
+# key: action
+# --
+define([], function () {
+    function ${1:name}() {
+
+    }
+
+    $1.prototype.name = '$1';
+
+    $1.prototype.execute = function (context, cb) {
+        var state = context.state;
+        var backend = context.backend;
+
+        $0
+    };
+
+    return $1;
+});

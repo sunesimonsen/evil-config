@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: that
+# key: that
+# --
+var that = this;

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: setTimeout
+# key: setTimeout
+# --
+setTimeout(function () {
+    $0
+}, ${1:1});

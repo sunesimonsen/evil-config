@@ -1,0 +1,6 @@
+(:name evil-walk-on-the-edge
+       :website "https://github.com/sunesimonsen/evil-walk-on-the-edge"
+       :description "Move around on (, [, {, }, ] and ) using Emacs Evil motions"
+       :type github
+       :pkgname "sunesimonsen/evil-walk-on-the-edge"
+       :features evil-walk-on-the-edge)

@@ -1,0 +1,6 @@
+(:name find-file-in-git-repo
+       :website "https://github.com/sunesimonsen/find-file-in-git-repo"
+       :description "A simple way to find any file in the git repo you are currently working in using ido-mode"
+       :type github
+       :pkgname "sunesimonsen/find-file-in-git-repo"
+       :features find-file-in-git-repo)

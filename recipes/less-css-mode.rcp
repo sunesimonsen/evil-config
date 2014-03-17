@@ -1,0 +1,6 @@
+(:name less-css-mode
+       :website "https://github.com/purcell/less-css-mode"
+       :description "Provides an Emacs mode for LESS CSS (lesscss.org), complete with support for compile-on-save."
+       :type github
+       :pkgname "purcell/less-css-mode"
+       :features less-css-mode)

@@ -1,0 +1,6 @@
+(:name flymake-node-jshint
+       :website "https://github.com/jegbjerg/flymake-node-jshint"
+       :description "Emacs library providing simple flymake for JavaScript using JSHint through node-jshint."
+       :type github
+       :pkgname "jegbjerg/flymake-node-jshint"
+       :features flymake-node-jshint)

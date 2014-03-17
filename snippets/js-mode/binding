@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: binding
+# key: binding
+# group: Knockout
+# --
+define(['knockout'], function (ko) {
+    ko.bindingHandlers.${1:name} = {
+        init: function (element, valueAccessor) {
+            var value = valueAccessor();
+            var bindingValue = ko.utils.unwrapObservable(value);
+            $0
+        },
+        update: function (element, valueAccessor) {
+            var value = valueAccessor();
+            var bindingValue = ko.utils.unwrapObservable(value);
+        }
+    };
+});

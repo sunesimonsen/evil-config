@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: tothrow
+# key: tothrow
+# --
+expect(function () {
+    $0
+}, 'to throw', '$1');

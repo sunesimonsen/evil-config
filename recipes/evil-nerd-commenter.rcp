@@ -1,0 +1,6 @@
+(:name evil-nerd-commenter
+       :website "https://github.com/redguardtoo/evil-nerd-commenter"
+       :description "Vim's nerd commenter ported to Emacs"
+       :type github
+       :pkgname "redguardtoo/evil-nerd-commenter"
+       :features evil-nerd-commenter)

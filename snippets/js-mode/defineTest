@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: defineTest
+# key: defineTest
+# group: test
+# --
+/*global defineTest, describe, it, beforeEach, expect, $*/
+defineTest([$1], function ($2) {
+             $0
+});
