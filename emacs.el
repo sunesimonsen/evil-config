@@ -89,7 +89,6 @@
 	  (progn
 	    (evil-mode 't)
 
-        (evil-select-search-module 'evil-search-module 'evil-search)
 	    (define-key evil-motion-state-map "æ" 'evil-ex)
 	    (define-key evil-normal-state-map "Æ" 'evil-execute-macro)
 
