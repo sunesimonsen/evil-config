@@ -87,9 +87,9 @@
    (:name evil
 	  :after
 	  (progn
-        (setq evil-search-module 'evil-search)
 	    (evil-mode 't)
 
+        (evil-select-search-module 'evil-search-module 'evil-search)
 	    (define-key evil-motion-state-map "æ" 'evil-ex)
 	    (define-key evil-normal-state-map "Æ" 'evil-execute-macro)
 
@@ -99,8 +99,8 @@
 	    (define-key evil-motion-state-map "Å" 'evil-backward-paragraph)
 	    (define-key evil-motion-state-map "Ø" 'evil-forward-paragraph)
 
-	    (define-key evil-motion-state-map (kbd "SPC") 'evil-search-forward)
-	    (define-key evil-motion-state-map (kbd "C-SPC") 'evil-search-backward)
+	    (define-key evil-motion-state-map (kbd "SPC") 'evil-ex-search-forward)
+	    (define-key evil-motion-state-map (kbd "C-SPC") 'evil-ex-search-backward)
 
 	    (define-key evil-visual-state-map (kbd "C-æ") 'evil-exit-visual-state)
 	    (define-key evil-insert-state-map (kbd "C-æ") 'evil-normal-state)
