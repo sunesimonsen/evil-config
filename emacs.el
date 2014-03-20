@@ -35,10 +35,10 @@
 (defun ido-disable-line-trucation () (set (make-local-variable 'truncate-lines) nil))
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
 
-                                        ; Font
+;;; Font
 (set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1")
 
-                                        ; stop forcing me to spell out "yes"
+;;; stop forcing me to spell out "yes"
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (define-key key-translation-map (kbd "½") (kbd "$"))
