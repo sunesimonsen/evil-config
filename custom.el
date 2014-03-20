@@ -9,6 +9,7 @@
  '(dabbrev-case-distinction nil)
  '(dabbrev-case-replace nil)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
+ '(evil-ex-search-highlight-all nil)
  '(evil-search-module (quote evil-search))
  '(global-auto-revert-mode t)
  '(goto-alternate-git-file-patterns (quote (("\\.spec\\.js$" . ".js") ("\\.h$" . ".c") ("Test\\.java$" . ".java") ("\\.ko$" . ".less") ("\\.less$" . ".ko"))))
@@ -38,4 +39,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(error ((t (:underline t))))
- '(lazy-highlight ((t (:background "gray13")))))
+ '(lazy-highlight ((t (:background "gray17")))))
