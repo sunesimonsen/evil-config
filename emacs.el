@@ -260,6 +260,8 @@
 
 ;;; TodoTxt
 (setq todotxt-default-file (expand-file-name "~/Dropbox/todo/todo.txt"))
+(setq todotxt-default-archive-file (expand-file-name "~/Dropbox/todo/done.txt"))
 (add-to-list 'auto-mode-alist '("/todo.txt$" . todotxt-mode))
+(add-to-list 'auto-mode-alist '("/done.txt$" . todotxt-mode))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
