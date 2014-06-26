@@ -228,7 +228,9 @@
    (:name flymake-node-jshint
           :after
           (progn
-            (add-hook 'js-mode-hook (lambda () (flymake-mode 1)))))
+            (add-hook 'js-mode-hook (lambda ()
+                                      (flymake-mode 1)
+                                      (flymake-cursor-mode 1)))))
    ))
 
 (setq my:el-get-packages
