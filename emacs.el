@@ -157,9 +157,6 @@
 
             (define-key evil-motion-state-map ";" 'evil-repeat-find-char-reverse)
 
-            (define-key evil-normal-state-map "g," 'goto-last-change)
-            (define-key evil-normal-state-map "g;" 'goto-last-change-reverse)
-
             (defun query-replace-symbol-at-point (replacement)
               "Query replace the symbol at point with the given replacement"
               (interactive "swith: ")
