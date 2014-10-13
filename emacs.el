@@ -51,6 +51,10 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.cjson$" . js-mode))
 
+(defun find-file-in-project-dir ()
+  (interactive)
+  (ido-find-file-in-dir "~/Projects"))
+
 (setq
  el-get-sources
  '((:name el-get)
@@ -151,8 +155,9 @@
             (define-key evil-leader-map "b" 'ido-switch-buffer)
             (define-key evil-leader-map "w" 'evil-write)
             (define-key evil-leader-map "a" 'goto-alternate-git-file)
-            (define-key evil-leader-map "g" 'ido-bookmark-jump)
+            (define-key evil-leader-map "g" 'find-file-in-project-dir)
             (define-key evil-leader-map "s" 'magit-status)
+            (define-key evil-leader-map "t" 'runtests)
             (define-key evil-motion-state-map "," 'evil-leader-map)
 
             (define-key evil-motion-state-map ";" 'evil-repeat-find-char-reverse)

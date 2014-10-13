@@ -1,0 +1,6 @@
+(:name runtests
+       :website "https://github.com/sunesimonsen/emacs-runtests"
+       :description "Run unit tests from Emacs"
+       :type github
+       :pkgname "sunesimonsen/emacs-runtests"
+       :features runtests)
