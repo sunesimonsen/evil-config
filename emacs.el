@@ -71,6 +71,7 @@
    (:name find-file-in-git-repo)
    (:name evil-walk-on-the-edge)
    (:name magit)
+   (:name runtests)
    (:name less-css-mode)
 
    (:name color-theme
