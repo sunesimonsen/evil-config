@@ -1,6 +1,8 @@
 (require 'thingatpt)
 
-;;; Setup the path
+;;; Setup environment
+(setq dotfiles (shell-command-to-string ". ~/.bashrc; echo -n $DOTFILES"))
+(setenv "DOTFILES" dotfiles)
 (let ((path (shell-command-to-string ". ~/.bashrc; echo -n $PATH")))
   (setenv "PATH" path)
   (setq exec-path
@@ -9,7 +11,7 @@
          exec-path)))
 
 ;;; Customize
-(setq custom-file "~/bin/dotfiles/evil-config/custom.el")
+(setq custom-file (concat dotfiles "/evil-config/custom.el"))
 (load custom-file)
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
@@ -228,7 +230,7 @@
           :after
           (progn
             (setq yas-snippet-dirs
-                  '("~/bin/dotfiles/evil-config/snippets"))
+                  (list (concat dotfiles "/evil-config/snippets")))
             (yas-global-mode 't)))
 
    (:name flymake-node-jshint
@@ -242,7 +244,7 @@
 (setq my:el-get-packages
       (loop for src in el-get-sources collect (el-get-source-name src)))
 
-(add-to-list 'el-get-recipe-path "~/bin/dotfiles/evil-config/recipes")
+(add-to-list 'el-get-recipe-path (concat dotfiles "/evil-config/recipes"))
 (el-get 'sync my:el-get-packages)
 
 (add-hook 'ido-setup-hook '(lambda ()
