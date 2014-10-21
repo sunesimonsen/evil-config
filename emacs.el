@@ -76,6 +76,21 @@
    (:name runtests)
    (:name less-css-mode)
 
+   (:name nodejs-repl
+          :after
+          (progn
+            (defun nodejs-repl-send-region ()
+              (interactive)
+              (when (use-region-p)
+                (let ((selection (buffer-substring-no-properties  (region-beginning) (region-end))))
+                  (with-current-buffer (get-buffer "*nodejs*")
+                    (message selection)
+                    (end-of-buffer)
+                    (insert selection)
+                    (comint-send-input)
+                    (end-of-buffer)))))))
+
+
    (:name color-theme
           :after
           (progn
