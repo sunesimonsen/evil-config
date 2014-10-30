@@ -285,3 +285,9 @@
 (add-to-list 'auto-mode-alist '("/todo.txt$" . todotxt-mode))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;; Package.json indent fix
+(add-hook 'js-mode-hook
+          (lambda ()
+            (when (string= "package.json" (file-name-nondirectory (buffer-file-name)))
+              (setq-local js-indent-level 2))))
