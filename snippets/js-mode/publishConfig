@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: publishConfig
+# key: publishConfig
+# --
+"publishConfig": {
+  "registry": "http://npm.one.com"
+},$0
