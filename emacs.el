@@ -218,6 +218,9 @@
               "L" 'bookmark-bmenu-load
               )
 
+            (define-key compilation-mode-map "f" 'next-error-follow-minor-mode)
+            (define-key grep-mode-map "f" 'next-error-follow-minor-mode)
+
             (evil-add-hjkl-bindings occur-mode-map 'emacs)
 
             (evil-add-hjkl-bindings magit-log-mode-map 'emacs
