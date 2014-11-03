@@ -218,8 +218,13 @@
               "L" 'bookmark-bmenu-load
               )
 
-            (define-key compilation-mode-map "f" 'next-error-follow-minor-mode)
-            (define-key grep-mode-map "f" 'next-error-follow-minor-mode)
+
+            (add-hook 'compilation-mode-hook
+                      (lambda ()
+                        (define-key compilation-mode-map "f" 'next-error-follow-minor-mode)))
+            (add-hook 'grep-setup-hook
+                      (lambda ()
+                        (define-key grep-mode-map "f" 'next-error-follow-minor-mode)))
 
             (evil-add-hjkl-bindings occur-mode-map 'emacs)
 
