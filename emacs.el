@@ -329,3 +329,5 @@ save it in `ffap-file-at-point-line-number' variable."
   (when ffap-file-at-point-line-number
     (goto-line ffap-file-at-point-line-number)
     (setq ffap-file-at-point-line-number nil)))
+
+(server-start)
