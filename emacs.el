@@ -75,6 +75,8 @@
    (:name magit)
    (:name runtests)
    (:name less-css-mode)
+   (:name git-gutter)
+   (:name git-gutter-fringe)
 
    (:name nodejs-repl
           :after
@@ -283,22 +285,18 @@
     (imenu--generic-function '((nil "function\\s-+\\([^ ]+\\)(" 1)
                                (nil "\\.\\([^\\. ]+\\)\\s-*=\\s-*function\\s-*(" 1)))))
 
-(defun my-js-mode-hook ()
-  (setq imenu-create-index-function 'my-js-imenu-make-index))
-
-(add-hook 'js-mode-hook 'my-js-mode-hook)
-
 ;;; TodoTxt
 (setq todotxt-default-file (expand-file-name "~/Dropbox/todo/todo.txt"))
 (add-to-list 'auto-mode-alist '("/todo.txt$" . todotxt-mode))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;;; Package.json indent fix
+;;; JavaScript mode hook
 (add-hook 'js-mode-hook
           (lambda ()
-            (when (string= "package.json" (file-name-nondirectory (buffer-file-name)))
-              (setq-local js-indent-level 2))))
+            (setq imenu-create-index-function 'my-js-imenu-make-index))
+            (when (and (buffer-file-name) (string= "package.json" (file-name-nondirectory (buffer-file-name))))
+              (setq-local js-indent-level 2)))
 
 ;;; Make ffap use line numbers
 (defvar ffap-file-at-point-line-number nil
