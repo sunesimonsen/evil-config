@@ -75,7 +75,10 @@
    (:name magit)
    (:name runtests)
    (:name less-css-mode)
-   (:name git-gutter)
+   (:name git-gutter
+          :after
+          (progn
+            (global-git-gutter-mode t)))
    (:name git-gutter-fringe)
 
    (:name nodejs-repl
