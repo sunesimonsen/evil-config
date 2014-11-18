@@ -75,6 +75,7 @@
    (:name magit)
    (:name runtests)
    (:name less-css-mode)
+   (:name diff-hl)
 
    (:name nodejs-repl
           :after

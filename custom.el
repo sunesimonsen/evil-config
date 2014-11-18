@@ -13,6 +13,7 @@
  '(evil-insert-state-modes (quote (comint-mode erc-mode eshell-mode geiser-repl-mode gud-mode inferior-apl-mode inferior-caml-mode inferior-emacs-lisp-mode inferior-j-mode inferior-python-mode inferior-scheme-mode inferior-sml-mode internal-ange-ftp-mode prolog-inferior-mode reb-mode shell-mode slime-repl-mode term-mode wdired-mode nodejs-repl-mode)))
  '(evil-search-module (quote evil-search))
  '(global-auto-revert-mode t)
+ '(global-diff-hl-mode t)
  '(goto-alternate-git-file-patterns (quote (("\\.spec\\.js$" . ".js") ("\\.h$" . ".c") ("Test\\.java$" . ".java") ("\\.ko$" . ".less") ("\\.less$" . ".ko"))))
  '(hl-paren-colors (quote ("green" "yellow" "magenta" "orange")))
  '(ido-auto-merge-delay-time 100)
