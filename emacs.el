@@ -154,8 +154,8 @@
 
             (define-key evil-motion-state-map "gt" 'evil-jump-to-tag)
             (define-key evil-motion-state-map "gk" 'evil-ace-jump-word-mode)
-            (define-key evil-motion-state-map "gå" 'flymake-goto-prev-error)
-            (define-key evil-motion-state-map "gø" 'flymake-goto-next-error)
+            (define-key evil-motion-state-map "gå" 'flycheck-previous-error)
+            (define-key evil-motion-state-map "gø" 'flycheck-next-error)
 
             (define-key evil-motion-state-map "\C-ø" 'evil-jump-to-tag)
 
@@ -256,12 +256,24 @@
                   (list (concat dotfiles "/evil-config/snippets")))
             (yas-global-mode 't)))
 
-   (:name flymake-node-jshint
+   (:name flycheck
           :after
           (progn
-            (add-hook 'js-mode-hook (lambda ()
-                                      (flymake-mode 1)
-                                      (flymake-cursor-mode 1)))))
+
+            (flycheck-def-config-file-var flycheck-jscs javascript-jscs ".jscsrc"
+              :safe #'stringp)
+
+            (flycheck-define-checker javascript-jscs
+              "A JavaScript code style checker. See URL `https://github.com/mdevils/node-jscs'."
+              :command ("jscs" "--reporter" "checkstyle"
+                        (config-file "--config" flycheck-jscs)
+                        source)
+              :error-parser flycheck-parse-checkstyle
+              :modes (js-mode js2-mode js3-mode)
+              :next-checkers (javascript-jshint))
+
+            (add-to-list 'flycheck-checkers 'javascript-jscs)
+            (add-hook 'js-mode-hook (lambda () (flycheck-mode 't)))))
    ))
 
 (setq my:el-get-packages
