@@ -75,7 +75,13 @@
    (:name magit)
    (:name runtests)
    (:name less-css-mode)
-   (:name diff-hl)
+   (:name diff-hl
+          :after
+          (progn
+            (global-diff-hl-mode 't)
+            (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+            (unless (display-graphic-p)
+              (diff-hl-margin-mode))))
 
    (:name nodejs-repl
           :after
