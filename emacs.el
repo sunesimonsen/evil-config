@@ -192,6 +192,7 @@
             (define-key evil-leader-map "vd" 'vc-diff)
             (define-key evil-leader-map "va" 'vc-annotate)
             (define-key evil-leader-map "vb" 'magit-blame-mode)
+            (define-key evil-leader-map "vl" 'magit-log)
             (define-key evil-leader-map "t" 'runtests)
             (define-key evil-motion-state-map "," 'evil-leader-map)
 
