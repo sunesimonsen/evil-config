@@ -164,8 +164,8 @@
             (define-key evil-motion-state-map "gk" 'evil-ace-jump-word-mode)
             (define-key evil-motion-state-map "gå" 'flycheck-previous-error)
             (define-key evil-motion-state-map "gø" 'flycheck-next-error)
-
-            (define-key evil-motion-state-map "\C-ø" 'evil-jump-to-tag)
+            (define-key evil-motion-state-map (kbd "C-å") 'diff-hl-previous-hunk)
+            (define-key evil-motion-state-map (kbd "C-ø") 'diff-hl-next-hunk)
 
             (define-key evil-visual-state-map (kbd "<tab>") ">gv")
             (define-key evil-visual-state-map (kbd "<backtab>") "<gv")
@@ -183,6 +183,10 @@
             (define-key evil-leader-map "a" 'goto-alternate-git-file)
             (define-key evil-leader-map "g" 'find-file-in-project-dir)
             (define-key evil-leader-map "s" 'magit-status)
+            (define-key evil-leader-map "vr" 'diff-hl-revert-hunk)
+            (define-key evil-leader-map "vd" 'vc-diff)
+            (define-key evil-leader-map "va" 'vc-annotate)
+            (define-key evil-leader-map "vb" 'magit-blame-mode)
             (define-key evil-leader-map "t" 'runtests)
             (define-key evil-motion-state-map "," 'evil-leader-map)
 
