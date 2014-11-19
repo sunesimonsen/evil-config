@@ -119,6 +119,11 @@
           (progn
             (evil-mode 't)
 
+            (loop for (mode . state) in '((git-commit-mode . insert)
+                                          (git-rebase-mode . emacs)
+                                          (magit-branch-manager-mode . emacs))
+                  do (evil-set-initial-state mode state))
+
             (define-key evil-motion-state-map "æ" 'evil-ex)
             (define-key evil-normal-state-map "Æ" 'evil-execute-macro)
 
