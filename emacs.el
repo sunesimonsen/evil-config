@@ -312,9 +312,12 @@
 ;;; JavaScript mode hook
 (add-hook 'js-mode-hook
           (lambda ()
-            (setq imenu-create-index-function 'my-js-imenu-make-index))
+            (setq imenu-create-index-function 'my-js-imenu-make-index)))
+
+(add-hook 'json-mode-hook
+          (lambda ()
             (when (and (buffer-file-name) (string= "package.json" (file-name-nondirectory (buffer-file-name))))
-              (setq-local js-indent-level 2)))
+              (setq-local js-indent-level 2))))
 
 ;;; Make ffap use line numbers
 (defvar ffap-file-at-point-line-number nil
