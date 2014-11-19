@@ -50,8 +50,7 @@
 
 ;;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.ko$" . html-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(add-to-list 'auto-mode-alist '("\\.cjson$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.cjson$" . json-mode))
 
 (defun find-file-in-project-dir ()
   (interactive)
@@ -75,6 +74,8 @@
    (:name magit)
    (:name runtests)
    (:name less-css-mode)
+   (:name json-mode)
+
    (:name diff-hl
           :after
           (progn
