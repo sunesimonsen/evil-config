@@ -32,6 +32,7 @@
  '(truncate-lines t)
  '(visible-bell t)
  '(x-select-enable-clipboard t)
+ '(x-select-enable-primary t)
  '(yas-prompt-functions (quote (yas-ido-prompt yas-x-prompt yas-dropdown-prompt yas-completing-prompt yas-ido-prompt yas-no-prompt)))
  '(yas/prompt-functions (quote (yas/ido-prompt yas/x-prompt yas/dropdown-prompt yas/completing-prompt yas/no-prompt))))
 (custom-set-faces
