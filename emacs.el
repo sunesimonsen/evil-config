@@ -56,6 +56,13 @@
   (interactive)
   (ido-find-file-in-dir "~/Projects"))
 
+(defun find-closest-file (dir file-name)
+  (if (string= "/" dir)
+      nil
+    (if (file-exists-p (expand-file-name file-name dir))
+        (expand-file-name file-name dir)
+      (find-closest-file (expand-file-name "../" dir) file-name))))
+
 (setq
  el-get-sources
  '((:name el-get)
@@ -286,6 +293,7 @@
               :command ("jscs" "--reporter" "checkstyle"
                         (config-file "--config" flycheck-jscs)
                         source)
+              :predicate (lambda () (find-closest-file default-directory flycheck-jscs))
               :error-parser flycheck-parse-checkstyle
               :modes (js-mode js2-mode js3-mode)
               :next-checkers (javascript-jshint))
