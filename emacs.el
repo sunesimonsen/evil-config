@@ -367,4 +367,7 @@ save it in `ffap-file-at-point-line-number' variable."
     (goto-line ffap-file-at-point-line-number)
     (setq ffap-file-at-point-line-number nil)))
 
-(server-start)
+;; start emacs server if it is not already started
+(load "server")
+(unless (server-running-p)
+  (server-start))
