@@ -120,6 +120,11 @@
 
             (dark-theme)))
 
+   (:name evil-leader
+          :after
+          (progn
+            (global-evil-leader-mode)
+            (evil-leader/set-leader ",")))
 
    (:name evil
           :after
@@ -185,25 +190,25 @@
             (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
             (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
-            (define-prefix-command 'evil-leader-map)
-            (define-key evil-leader-map "," 'evil-repeat-find-char)
-            (define-key evil-leader-map "p" 'find-file-in-git-repo)
-            (define-key evil-leader-map "o" 'ido-goto-symbol)
-            (define-key evil-leader-map "e" 'ido-find-file)
-            (define-key evil-leader-map "b" 'ido-switch-buffer)
-            (define-key evil-leader-map "w" 'evil-write)
-            (define-key evil-leader-map "a" 'goto-alternate-git-file)
-            (define-key evil-leader-map "g" 'find-file-in-project-dir)
-            (define-key evil-leader-map "s" 'magit-status)
-            (define-key evil-leader-map "vr" 'diff-hl-revert-hunk)
-            (define-key evil-leader-map "vd" 'vc-diff)
-            (define-key evil-leader-map "va" 'vc-annotate)
-            (define-key evil-leader-map "vb" 'magit-blame-mode)
-            (define-key evil-leader-map "vl" 'magit-log)
-            (define-key evil-leader-map "t" 'runtests)
-            (define-key evil-motion-state-map "," 'evil-leader-map)
-
-            (define-key evil-motion-state-map ";" 'evil-repeat-find-char-reverse)
+            (evil-leader/set-key
+              "p" 'find-file-in-git-repo
+              "o" 'ido-goto-symbol
+              "e" 'ido-find-file
+              "b" 'ido-switch-buffer
+              "w" 'evil-write
+              "a" 'goto-alternate-git-file
+              "g" 'find-file-in-project-dir
+              "s" 'magit-status
+              "vr" 'diff-hl-revert-hunk
+              "vd" 'vc-diff
+              "va" 'vc-annotate
+              "vb" 'magit-blame-mode
+              "vl" 'magit-log
+              "," 'evilnc-comment-or-uncomment-lines
+              "cl" 'evilnc-comment-or-uncomment-to-the-line
+              "cc" 'evilnc-copy-and-comment-lines
+              "cp" 'evilnc-comment-or-uncomment-paragraphs
+              "t" 'runtests)
 
             (defun query-replace-symbol-at-point (replacement)
               "Query replace the symbol at point with the given replacement"
