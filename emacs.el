@@ -124,7 +124,26 @@
           :after
           (progn
             (global-evil-leader-mode)
-            (evil-leader/set-leader ",")))
+            (evil-leader/set-leader ",")
+            (evil-leader/set-key
+              "p" 'find-file-in-git-repo
+              "o" 'ido-goto-symbol
+              "e" 'ido-find-file
+              "b" 'ido-switch-buffer
+              "w" 'evil-write
+              "a" 'goto-alternate-git-file
+              "g" 'find-file-in-project-dir
+              "s" 'magit-status
+              "vr" 'diff-hl-revert-hunk
+              "vd" 'vc-diff
+              "va" 'vc-annotate
+              "vb" 'magit-blame-mode
+              "vl" 'magit-log
+              "," 'evilnc-comment-or-uncomment-lines
+              "cl" 'evilnc-comment-or-uncomment-to-the-line
+              "cc" 'evilnc-copy-and-comment-lines
+              "cp" 'evilnc-comment-or-uncomment-paragraphs
+              "t" 'runtests)))
 
    (:name evil
           :after
@@ -189,26 +208,6 @@
 
             (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
             (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
-
-            (evil-leader/set-key
-              "p" 'find-file-in-git-repo
-              "o" 'ido-goto-symbol
-              "e" 'ido-find-file
-              "b" 'ido-switch-buffer
-              "w" 'evil-write
-              "a" 'goto-alternate-git-file
-              "g" 'find-file-in-project-dir
-              "s" 'magit-status
-              "vr" 'diff-hl-revert-hunk
-              "vd" 'vc-diff
-              "va" 'vc-annotate
-              "vb" 'magit-blame-mode
-              "vl" 'magit-log
-              "," 'evilnc-comment-or-uncomment-lines
-              "cl" 'evilnc-comment-or-uncomment-to-the-line
-              "cc" 'evilnc-copy-and-comment-lines
-              "cp" 'evilnc-comment-or-uncomment-paragraphs
-              "t" 'runtests)
 
             (defun query-replace-symbol-at-point (replacement)
               "Query replace the symbol at point with the given replacement"
