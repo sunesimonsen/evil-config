@@ -1,4 +1,6 @@
 (require 'thingatpt)
+;;; Fix dead keys problem in Ubuntu
+(require 'iso-transl)
 
 ;;; Setup environment
 (setq dotfiles (shell-command-to-string ". ~/.bashrc; echo -n $DOTFILES"))
