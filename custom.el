@@ -29,7 +29,6 @@
  '(surround-pairs-alist (quote ((40 "(" . ")") (91 "[" . "]") (123 "{" . "}") (41 "(" . ")") (93 "[" . "]") (125 "{" . "}") (35 "#{" . "}") (98 "(" . ")") (66 "{" . "}") (62 "<" . ">") (116 . surround-read-tag) (60 . surround-read-tag))))
  '(tab-width 4)
  '(timeclock-file "~/Dropbox/timelog")
- '(timeclock-mode-line-display t nil (timeclock))
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(visible-bell t)
