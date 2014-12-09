@@ -52,6 +52,7 @@
 
 ;;; auto-mode-alist
 (add-to-list 'auto-mode-alist '("\\.ko$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.cjson$" . json-mode))
 
 (defun find-file-in-project-dir ()
