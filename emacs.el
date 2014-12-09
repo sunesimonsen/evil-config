@@ -90,6 +90,7 @@
           (progn
             (global-diff-hl-mode 't)
             (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+            (add-hook 'global-auto-revert-mode-hook 'diff-hl-update nil t)
             (unless (display-graphic-p)
               (diff-hl-margin-mode))))
 
