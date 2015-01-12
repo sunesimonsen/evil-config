@@ -85,6 +85,7 @@
    (:name runtests)
    (:name less-css-mode)
    (:name json-mode)
+   (:name coffee-mode)
 
    (:name diff-hl
           :after
