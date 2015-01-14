@@ -251,9 +251,6 @@
               "L" 'bookmark-bmenu-load
               )
 
-            (add-hook 'diff-mode-hook
-                      (lambda ()
-                        (define-key evil-normal-state-local-map "q" 'quit-window))
 
             (add-hook 'compilation-mode-hook
                       (lambda ()
@@ -379,6 +376,12 @@ save it in `ffap-file-at-point-line-number' variable."
   (when ffap-file-at-point-line-number
     (goto-line ffap-file-at-point-line-number)
     (setq ffap-file-at-point-line-number nil)))
+
+
+;; grep
+(eval-after-load 'grep
+  '(progn
+     (add-to-list 'grep-find-ignored-directories "node_modules")))
 
 ;; start emacs server if it is not already started
 (load "server")
