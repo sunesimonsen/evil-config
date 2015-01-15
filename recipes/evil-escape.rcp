@@ -4,4 +4,4 @@
        :type github
        :depends key-chord
        :pkgname "syl20bnr/evil-escape"
-       :features 'evil-escape)
+       :features evil-escape)

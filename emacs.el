@@ -86,6 +86,7 @@
    (:name less-css-mode)
    (:name json-mode)
    (:name coffee-mode)
+   (:name evil-escape)
 
    (:name diff-hl
           :after
