@@ -1,0 +1,7 @@
+(:name evil-escape
+       :website "https://github.com/syl20bnr/evil-escape/blob/master/evil-escape.el"
+       :description "Customizable key sequence to escape from insert state and everything else in Emacs."
+       :type github
+       :depends key-chord
+       :pkgname "syl20bnr/evil-escape"
+       :features 'evil-escape)
