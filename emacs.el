@@ -251,6 +251,9 @@
               "L" 'bookmark-bmenu-load
               )
 
+            (add-hook 'diff-mode-hook
+                      (lambda ()
+                        (define-key evil-normal-state-local-map "q" 'quit-window))
 
             (add-hook 'compilation-mode-hook
                       (lambda ()
