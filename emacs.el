@@ -90,7 +90,7 @@
    (:name evil-escape
           :after
           (progn
-            (evil-escape-mode 't))
+            (evil-escape-mode 't)))
 
    (:name diff-hl
           :after
