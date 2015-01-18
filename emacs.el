@@ -262,9 +262,13 @@
 
             (add-hook 'compilation-mode-hook
                       (lambda ()
+                        (define-key compilation-mode-map (kbd "SPC") 'evil-ex-search-forward)
+                        (define-key compilation-mode-map (kbd "C-SPC") 'evil-ex-search-backward)
                         (define-key compilation-mode-map "f" 'next-error-follow-minor-mode)))
             (add-hook 'grep-setup-hook
                       (lambda ()
+                        (define-key grep-mode-map (kbd "SPC") 'evil-ex-search-forward)
+                        (define-key grep-mode-map (kbd "C-SPC") 'evil-ex-search-backward)
                         (define-key grep-mode-map "f" 'next-error-follow-minor-mode)))
 
             (evil-add-hjkl-bindings occur-mode-map 'emacs)
@@ -354,6 +358,19 @@
           (lambda ()
             (when (and (buffer-file-name) (string= "package.json" (file-name-nondirectory (buffer-file-name))))
               (setq-local js-indent-level 2))))
+
+;;; Compilation mode file links for JavaScript stack traces
+(add-to-list 'compilation-error-regexp-alist 'phantomjs-stack-trace)
+(add-to-list 'compilation-error-regexp-alist-alist
+             '(phantomjs-stack-trace
+               "at \\(?:.+ \\)?(?\\(.+\\):\\([[:digit:]]+\\))?$"
+               1 2))
+
+(add-to-list 'compilation-error-regexp-alist 'javascript-stack-trace)
+(add-to-list 'compilation-error-regexp-alist-alist
+             '(javascript-stack-trace
+               "at \\(?:.+ \\)?(?\\(.+\\):\\([[:digit:]]+\\):\\([[:digit:]]+\\))?$"
+               1 2 3))
 
 ;;; Make ffap use line numbers
 (defvar ffap-file-at-point-line-number nil
