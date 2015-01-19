@@ -87,11 +87,6 @@
    (:name json-mode)
    (:name coffee-mode)
 
-   (:name evil-escape
-          :after
-          (progn
-            (evil-escape-mode 't)))
-
    (:name diff-hl
           :after
           (progn
@@ -262,14 +257,13 @@
 
             (add-hook 'compilation-mode-hook
                       (lambda ()
-                        (define-key compilation-mode-map (kbd "SPC") 'evil-ex-search-forward)
-                        (define-key compilation-mode-map (kbd "C-SPC") 'evil-ex-search-backward)
-                        (define-key compilation-mode-map "f" 'next-error-follow-minor-mode)))
+                        (use-local-map evil-motion-state-map)
+                        (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)))
+
             (add-hook 'grep-setup-hook
                       (lambda ()
-                        (define-key grep-mode-map (kbd "SPC") 'evil-ex-search-forward)
-                        (define-key grep-mode-map (kbd "C-SPC") 'evil-ex-search-backward)
-                        (define-key grep-mode-map "f" 'next-error-follow-minor-mode)))
+                        (use-local-map evil-motion-state-map)
+                        (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)))
 
             (evil-add-hjkl-bindings occur-mode-map 'emacs)
 
