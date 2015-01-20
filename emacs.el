@@ -255,15 +255,14 @@
                       (lambda ()
                         (define-key evil-normal-state-local-map "q" 'quit-window)))
 
-            (add-hook 'compilation-mode-hook
-                      (lambda ()
-                        (use-local-map evil-motion-state-map)
-                        (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)))
+            (defun compilation-mode-setup ()
+              (use-local-map evil-motion-state-map)
+              (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)
+              (define-key evil-motion-state-local-map "å" 'compilation-previous-error)
+              (define-key evil-motion-state-local-map "ø" 'compilation-next-error))
 
-            (add-hook 'grep-setup-hook
-                      (lambda ()
-                        (use-local-map evil-motion-state-map)
-                        (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)))
+            (add-hook 'compilation-mode-hook 'compilation-mode-setup)
+            (add-hook 'grep-setup-hook 'compilation-mode-setup)
 
             (evil-add-hjkl-bindings occur-mode-map 'emacs)
 
