@@ -194,6 +194,7 @@
             (define-key evil-motion-state-map (kbd "M--") 'evil-window-decrease-height)
             (define-key evil-motion-state-map (kbd "M-+") 'evil-window-increase-height)
 
+            (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
 
             (define-key evil-inner-text-objects-map "å" 'evil-inner-bracket)
             (define-key evil-inner-text-objects-map "ø" 'evil-inner-bracket)
