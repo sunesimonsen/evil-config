@@ -46,6 +46,12 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (define-key key-translation-map (kbd "½") (kbd "$"))
+(define-key key-translation-map (kbd "M-7") "{")
+(define-key key-translation-map (kbd "M-0") "}")
+(define-key key-translation-map (kbd "M-8") "[")
+(define-key key-translation-map (kbd "M-9") "]")
+(define-key key-translation-map (kbd "M-(") "{")
+(define-key key-translation-map (kbd "M-)") "}")
 
 (require 'uniquify)
 (set-variable 'uniquify-buffer-name-style 'forward)
