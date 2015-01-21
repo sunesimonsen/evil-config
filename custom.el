@@ -10,6 +10,7 @@
  '(dabbrev-case-replace nil)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(evil-ex-search-highlight-all nil)
+ '(evil-ex-substitute-case (quote sensitive))
  '(evil-insert-state-modes (quote (comint-mode erc-mode eshell-mode geiser-repl-mode gud-mode inferior-apl-mode inferior-caml-mode inferior-emacs-lisp-mode inferior-j-mode inferior-python-mode inferior-scheme-mode inferior-sml-mode internal-ange-ftp-mode prolog-inferior-mode reb-mode shell-mode slime-repl-mode term-mode wdired-mode nodejs-repl-mode)))
  '(evil-search-module (quote evil-search))
  '(global-auto-revert-mode t)
