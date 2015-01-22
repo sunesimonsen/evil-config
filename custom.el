@@ -3,11 +3,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(backup-by-copying t)
  '(backup-directory-alist (quote ((".*" . "~/.evil.backups"))))
  '(blink-cursor-mode nil)
  '(case-replace nil)
  '(dabbrev-case-distinction nil)
  '(dabbrev-case-replace nil)
+ '(delete-old-versions t)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(evil-ex-search-highlight-all nil)
  '(evil-ex-substitute-case (quote sensitive))
@@ -20,6 +22,8 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
+ '(kept-new-versions 3)
+ '(version-control t)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1000)
