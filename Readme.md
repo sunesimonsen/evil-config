@@ -46,11 +46,11 @@ ALT-+ evil-window-increase-height
 Space evil-ex-search-forward
 C-Space evil-ex-search-backward
 
-å" 'evil-move-backward-paren
-ø" 'evil-move-forward-paren
+å evil-move-backward-paren
+ø evil-move-forward-paren
 
-Å" 'evil-backward-paragraph
-Ø" 'evil-forward-paragraph
+Å evil-backward-paragraph
+Ø evil-forward-paragraph
 
 Control-å diff-hl-previous-hunk
 Control-ø diff-hl-next-hunk
@@ -64,8 +64,8 @@ gk evil-ace-jump-word-mode
 # Convenience
 
 ```
-æ" 'evil-ex
-Æ" 'evil-execute-macro
+æ evil-ex
+Æ evil-execute-macro
 
 Control-æ evil-normal-state
 ```
