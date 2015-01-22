@@ -1,0 +1,6 @@
+(:name backup-each-save
+       :website "https://github.com/yyr/backup-each-save"
+       :description "Backup file on each save"
+       :type github
+       :pkgname "yyr/backup-each-save"
+       :features backup-each-save)

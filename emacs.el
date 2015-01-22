@@ -93,6 +93,11 @@
    (:name json-mode)
    (:name coffee-mode)
 
+   (:name backup-each-save
+          :after
+          (progn
+            (add-hook 'after-save-hook 'backup-each-save)))
+
    (:name diff-hl
           :after
           (progn
