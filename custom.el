@@ -3,8 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-by-copying t)
- '(backup-directory-alist (quote ((".*" . "~/.evil.backups"))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups"))))
  '(blink-cursor-mode nil)
  '(case-replace nil)
  '(dabbrev-case-distinction nil)
@@ -23,7 +24,6 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
  '(kept-new-versions 3)
- '(version-control t)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1000)
@@ -36,6 +36,7 @@
  '(timeclock-file "~/Dropbox/timelog")
  '(tool-bar-mode nil)
  '(truncate-lines t)
+ '(version-control t)
  '(visible-bell t)
  '(x-select-enable-clipboard t)
  '(x-select-enable-primary t)
