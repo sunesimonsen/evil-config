@@ -25,7 +25,6 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
  '(kept-new-versions 3)
- '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1000)
