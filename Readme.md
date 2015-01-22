@@ -2,6 +2,7 @@
 
 ## Window management:
 
+```
 ALT-h evil-window-left
 ALT-j evil-window-down
 ALT-k evil-window-up
@@ -14,9 +15,11 @@ ALT-v split-window-horizontally
 ALT-s split-window-vertically
 ALT-- evil-window-decrease-height
 ALT-+ evil-window-increase-height
+```
 
 ## File management
 
+```
 ,p find-file-in-git-repo
 ,o ido-goto-symbol
 ,e ido-find-file
@@ -35,9 +38,11 @@ ALT-+ evil-window-increase-height
 ,cc evilnc-copy-and-comment-lines
 ,cp evilnc-comment-or-uncomment-paragraphs
 ,t runtests
+```
 
 ## Navigation
 
+```
 Space evil-ex-search-forward
 C-Space evil-ex-search-backward
 
@@ -54,15 +59,20 @@ gå flycheck-previous-error
 gø flycheck-next-error
 
 gk evil-ace-jump-word-mode
+```
 
 # Convenience
 
+```
 æ" 'evil-ex
 Æ" 'evil-execute-macro
 
 Control-æ evil-normal-state
+```
 
 # Indentation in visual mode
 
+```
 tab to indent selected lines
 Shift-tab
+```
