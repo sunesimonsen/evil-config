@@ -269,7 +269,8 @@
 
             (defun compilation-mode-setup ()
               (use-local-map evil-motion-state-map)
-              (define-key evil-motion-state-local-map "q" 'quit-window)
+              (define-key evil-normal-state-local-map "r" 'recompile)
+              (define-key evil-normal-state-local-map "q" 'quit-window)
               (define-key evil-motion-state-local-map "f" 'next-error-follow-minor-mode)
               (define-key evil-motion-state-local-map "å" 'compilation-previous-error)
               (define-key evil-motion-state-local-map "ø" 'compilation-next-error))
