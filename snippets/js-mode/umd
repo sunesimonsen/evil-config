@@ -1,0 +1,19 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: umd
+# key: umd
+# --
+(function (factory) {
+    // Support three module loading scenarios
+    if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {
+        // CommonJS/Node.js
+        factory($1);
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD anonymous module
+        define([$2], factory);
+    } else {
+        // <script> tag
+        factory($3);
+    }
+}(function ($4) {
+    $0
+}));
