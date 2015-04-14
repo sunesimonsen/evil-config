@@ -2,4 +2,4 @@
        :website "https://github.com/tarao/evil-plugins"
        :description "It provides little-word motion commands and text objects"
        :type http
-       :url "https://raw2.github.com/tarao/evil-plugins/master/evil-little-word.el")
+       :url "https://raw.github.com/tarao/evil-plugins/master/evil-little-word.el")
