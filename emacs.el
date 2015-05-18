@@ -160,6 +160,13 @@
               "cp" 'evilnc-comment-or-uncomment-paragraphs
               "t" 'runtests)))
 
+   (:name evil-args
+          :after
+          (progn
+            (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+            (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+            ))
+
    (:name evil
           :after
           (progn
